@@ -1,0 +1,27 @@
+{
+	"name": "react-ssr-demo",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/Ireliana/react-ssr-demo.git",
+	"author": "kong",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/preset-env": "^7.9.0",
+		"@babel/preset-react": "^7.9.4",
+		"babel-loader": "^8.1.0",
+		"express": "^4.17.1",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"webpack": "^4.42.1",
+		"webpack-cli": "^3.3.11",
+		"webpack-merge": "^4.2.2",
+		"webpack-node-externals": "^1.7.2"
+	},
+	"dependencies": {},
+	"scripts": {
+        "dev": "node src/index.js",
+        "client": "webpack --config build/webpack.client.js",
+		"server": "webpack --config build/webpack.server.js"
+	}
+}
