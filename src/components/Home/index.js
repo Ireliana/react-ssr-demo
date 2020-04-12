@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 const Home = () => {
 	return (
 		<div>
@@ -10,6 +11,7 @@ const Home = () => {
 			>
 				click me
 			</button>
+			<NavLink to="/login">to login page</NavLink>
 		</div>
 	);
 };
