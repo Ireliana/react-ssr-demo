@@ -1,19 +1,35 @@
-const path = require("path");
-const config = require("./webpack.base");
-const merge = require("webpack-merge");
-const nodeExternals = require("webpack-node-externals");
+const path = require('path')
+const config = require('./webpack.base')
+const merge = require('webpack-merge')
+const nodeExternals = require('webpack-node-externals')
 
 function resolve(file) {
-	return path.resolve(__dirname, "../src", file);
+	return path.resolve(__dirname, '../src', file)
 }
 
 module.exports = merge(config, {
-	target: "node",
-	mode: "development",
+	target: 'node',
+	mode: 'development',
 	externals: [nodeExternals()],
-	entry: resolve("server/index.js"),
+	entry: resolve('server/index.js'),
 	output: {
-		filename: "server.bundle.js",
-		path: resolve("../dist")
-	}
-});
+		filename: 'server.bundle.js',
+		path: resolve('../dist'),
+	},
+	module: {
+		rules: [
+			{
+				test: /\.css$/,
+				use: [
+					'isomorphic-style-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							modules: true,
+						},
+					},
+				],
+			},
+		],
+	},
+})
