@@ -13,7 +13,7 @@
 		"axios": "^0.19.2",
 		"babel-loader": "^8.1.0",
 		"css-loader": "^3.5.2",
-		"express": "^4.17.1",
+		"express": "^4.17.3",
 		"isomorphic-style-loader": "^5.1.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
